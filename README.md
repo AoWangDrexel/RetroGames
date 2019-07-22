@@ -10,7 +10,7 @@ Old school video games, like Whack-A-Mole, Pong, and many others!
 * Nested loops, do-while loops
 * Regular Expressions, regex
 
-# Pong
+# Pong (Glitches on the edge of paddle, need of more creativity)
 ## What I Learned 
 * Object-Oriented Programming
   * Classes, objects, instance variables, etc.
@@ -19,3 +19,4 @@ Old school video games, like Whack-A-Mole, Pong, and many others!
 * stroke(), fill(),  ellipse(), rect(), etc..
 * Built-in variables and methods
   * mouseX, mouseY, keyPressed, etc.
+
