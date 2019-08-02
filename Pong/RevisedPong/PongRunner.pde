@@ -73,7 +73,7 @@ void draw() {
 
     // dividing line
     for (int i = 0; i < height; i++) {
-      rect(width/2, i * 20, 1, 5);
+      rect(width/2, i * 20, 2, 5);
     }
   }
 }
@@ -93,30 +93,65 @@ void controls() {
   }
 }
 
-// if ball hits paddle, ball goes opposite direction
-// need to add functionality to the paddle, so different
-// section ricochets the ball in different angles
+
+// sections in the paddle ricochets the ball in different angles
 public void hitPaddle() {
-  if (b.loc.x < left.loc.x + left.w + 5) {
-    if (b.loc.y > left.loc.y && b.loc.y < left.loc.y + left.h) {
-      if (b.loc.y > left.loc.y + left.w/2) {
-        b.vel.x = 5 * cos(radians(random(-45, 0)));
-        b.vel.y = 5 * sin(radians(random(-45, 0)));
+  if (b.loc.x <= left.loc.x + left.w) {
+    if (b.loc.y >= left.loc.y && b.loc.y <= left.loc.y + left.h) {
+      if (b.loc.y <= left.loc.y && b.loc.y <= left.loc.y + left.loc.y/8) {
+        b.vel.x = 8 * cos(radians(-45));
+        b.vel.y = 8 * sin(radians(-45));
+      } else if (b.loc.y >= left.loc.y + left.loc.y/8 && b.loc.y <= left.loc.y +  + left.loc.y/4) {
+        b.vel.x = 8 * cos(radians(-30));
+        b.vel.y = 8 * sin(radians(-30));
+      } else if (b.loc.y >= left.loc.y +  + left.loc.y/4 && b.loc.y <= left.loc.y + 3 * left.loc.y/8) {
+        b.vel.x = 8 * cos(radians(-15));
+        b.vel.y = 8 * sin(radians(-15));
+      } else if (b.loc.y >= left.loc.y + 3 * left.loc.y/8 && b.loc.y <= left.loc.y + left.loc.y/2) {
+        b.vel.x = 8 * cos(radians(0));
+        b.vel.y = 8 * sin(radians(0));
+      } else if (b.loc.y >= left.loc.y + left.loc.y/2 && b.loc.y <= left.loc.y + 5 * left.loc.y/8) {
+        b.vel.x = 8 * cos(radians(0));
+        b.vel.y = 8 * sin(radians(0));
+      } else if (b.loc.y >= left.loc.y + 5 * left.loc.y/8 && b.loc.y <= left.loc.y + 3 * left.loc.y/4) {
+        b.vel.x = 8 * cos(radians(15));
+        b.vel.y = 8 * sin(radians(15));
+      } else if (b.loc.y >= left.loc.y + 3 * left.loc.y/4 && b.loc.y <= left.loc.y + 7 * left.loc.y/8) {
+        b.vel.x = 8 * cos(radians(30));
+        b.vel.y = 8 * sin(radians(30));
       } else {
-        b.vel.x = 5 * cos(radians(random(45)));
-        b.vel.y = 5 * sin(radians(random(45)));
+        b.vel.x = 8 * cos(radians(45));
+        b.vel.y = 8 * sin(radians(45));
       }
     }
   }
 
-  if (b.loc.x > right.loc.x - 5) {
-    if (b.loc.y > right.loc.y && b.loc.y < right.loc.y + right.h) {
-      if (b.loc.y > right.loc.y + right.w/2) {
-        b.vel.x = 5 * cos(radians(random(225)));
-        b.vel.y = 5 * sin(radians(random(225)));
+  if (b.loc.x >= right.loc.x - right.w) {
+    if (b.loc.y >= right.loc.y && b.loc.y <= right.loc.y + right.h ) {
+      if (b.loc.y <= right.loc.y && b.loc.y <= right.loc.y + right.loc.y/8) {
+        b.vel.x = 8 * cos(radians(-135));
+        b.vel.y = 8 * sin(radians(-135));
+      } else if (b.loc.y >= right.loc.y + right.loc.y/8 && b.loc.y <= right.loc.y +  + right.loc.y/4) {
+        b.vel.x = 8 * cos(radians(-150));
+        b.vel.y = 8 * sin(radians(-150));
+      } else if (b.loc.y >= right.loc.y +  + right.loc.y/4 && b.loc.y <= right.loc.y + 3 * right.loc.y/8) {
+        b.vel.x = 8 * cos(radians(-165));
+        b.vel.y = 8 * sin(radians(-165));
+      } else if (b.loc.y >= right.loc.y + 3 * right.loc.y/8 && b.loc.y <= right.loc.y + right.loc.y/2) {
+        b.vel.x = 8 * cos(radians(180));
+        b.vel.y = 8 * sin(radians(180));
+      } else if (b.loc.y >= right.loc.y + right.loc.y/2 && b.loc.y <= right.loc.y + 5 * right.loc.y/8) {
+        b.vel.x = 8 * cos(radians(180));
+        b.vel.y = 8 * sin(radians(180));
+      } else if (b.loc.y >= right.loc.y + 5 * right.loc.y/8 && b.loc.y <= right.loc.y + 3 * right.loc.y/4) {
+        b.vel.x = 8 * cos(radians(165));
+        b.vel.y = 8 * sin(radians(165));
+      } else if (b.loc.y >= right.loc.y + 3 * right.loc.y/4 && b.loc.y <= right.loc.y + 7 * right.loc.y/8) {
+        b.vel.x = 8 * cos(radians(150));
+        b.vel.y = 8 * sin(radians(150));
       } else {
-        b.vel.x = 5 * cos(radians(random(135)));
-        b.vel.y = 5 * sin(radians(random(135)));
+        b.vel.x = 8 * cos(radians(135));
+        b.vel.y = 8 * sin(radians(135));
       }
     }
   }
