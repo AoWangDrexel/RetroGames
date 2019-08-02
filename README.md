@@ -18,6 +18,12 @@ Old school video games, like Whack-A-Mole, Pong, and many others!
 * stroke(), fill(),  ellipse(), rect(), etc..
 * Built-in variables and methods
   * mouseX, mouseY, keyPressed, etc.
+  
+## Revise-Version (two-player, includes angle reflection, score board)
+### Still under construction
+* PVectors
+* Angles, trigonmetric functions
+
 
 # Snake
 ## What I Learned
