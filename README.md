@@ -20,7 +20,7 @@ Old school video games, like Whack-A-Mole, Pong, and many others!
   * mouseX, mouseY, keyPressed, etc.
   
 ## Revise-Version (two-player, includes angle reflection, score board)
-### Still under construction
+** Still under construction
 * PVectors
 * Angles, trigonmetric functions
 
