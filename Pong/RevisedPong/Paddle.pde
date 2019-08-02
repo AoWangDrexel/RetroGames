@@ -6,7 +6,7 @@ public class Paddle {
   public Paddle(PVector loc) {
     this.loc = loc;
     w = 20;
-    h = 100;
+    h = 104;
   }
 
   // shows the paddle on screen
