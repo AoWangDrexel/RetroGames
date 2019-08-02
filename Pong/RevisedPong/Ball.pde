@@ -14,7 +14,7 @@ public class Ball {
   public void display() {
     fill(255);
     noStroke();
-    ellipse(loc.x, loc.y, size, size);
+    rect(loc.x, loc.y, size, size);
   }
 
   // makes the ball move on screen by adding velocity to location
@@ -45,7 +45,7 @@ public class Ball {
   public void respawn() {
     loc = new PVector(width/2, height/2);
     angle = random(-PI/4, PI/4);
-    vel = new PVector(5 * cos(angle), 5 * sin(angle));
+    vel = new PVector(8 * cos(radians(angle)), 8 * sin(radians(angle)));
     if (random(1) < 0.5) {
       vel.x *= -1;
     }
