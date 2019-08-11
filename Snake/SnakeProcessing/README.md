@@ -1,2 +1,2 @@
 # Snake Game
-![snake game] (snake.gif)
+![snake game](snake.gif)
