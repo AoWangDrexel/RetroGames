@@ -15,3 +15,5 @@
 
 * Diagram for ball deflection, cutting the paddle into 8 sections and assigning them to certain angle deflections: 
 ![Angle deflection](https://user-images.githubusercontent.com/21019116/33454021-81ad0a10-d63d-11e7-8578-80b265f65bbd.png)
+
+![pong](pong.gif)
