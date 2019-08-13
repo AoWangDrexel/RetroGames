@@ -39,6 +39,8 @@ Old school video games, like Whack-A-Mole, Pong, and many others!
 * List, ArrayList
 * Hexadecimal color codes
 
+# TicTacToe
+
 ## Inspiration
 * https://www.openprocessing.org/sketch/106774/
 * https://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html 
