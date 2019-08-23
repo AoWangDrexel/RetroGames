@@ -1,6 +1,6 @@
 """
 Author: Ao Wang
-Date: 08/23/19
+Date: 08/21/19
 
 Description: The game is Rock Paper Scissors with a certain twist.
 There is a random operation when the weaker hand will win instead of
@@ -43,10 +43,9 @@ def computer():
 def fullName(move):
     if move == "r":
         return "Rock"
-    elif move == "p":
+    if move == "p":
         return "Paper"
-    elif move == "s":
-        return "Scissors"
+    return "Scissors"
 
 # Introduction
 print("Welcome to the Reverse Rock Paper Scissor Game!")
@@ -66,8 +65,13 @@ computer_score = 0
 name = input("What is your name? ")
 
 while play_again == "y":
-    choice = input("Make your move, " + name + "! Rock (r), paper (p), or scissors (s)? ")
-    choice = choice.lower()
+    choice = input("Make your move, " + name + "! Rock (r), paper (p), or scissors (s)? ").lower()
+    
+    # DeMorgan's Law: choice != "r" and choice != "p" and choice != "s"
+    while not(choice == "r" or choice == "p" or choice == "s"):
+        print("Wrong input. Enter again!")
+        choice = input("Make your move, " + name + "! Rock (r), paper (p), or scissors (s)? ").lower()
+        
     print()
 
     # 1/2 chance of a weaker hand (False), or stronger hand (True)
@@ -87,19 +91,17 @@ while play_again == "y":
     elif win_result == 1:
         print(name + " won!\n")
         user_score += 1
-    elif win_result == -1:
+    else:
         print("The computer won!\n")
         computer_score += 1
         
     print(name + ": " + str(user_score) + "\nComputer: " + str(computer_score))
     
-    play_again = input("Would you like to play again? (y or n) ")
-    play_again = play_again.lower()
+    play_again = input("Would you like to play again? (y or n) ").lower()
     
-    # DeMorgan's Law: play_again != "y" and play_again != "n"
     while not(play_again == "y" or play_again == "n"):
-        print("There is an error. Please enter again")
-        play_again = input("Would you like to play again? (y or n) ")
+        print("Wrong input. Enter again!")
+        play_again = input("Would you like to play again? (y or n) ").lower()
         
 print()        
 print("Thank you for playing!")
